@@ -4,6 +4,9 @@
 echo "starting virtuoso …"
 service virtuoso-opensource-6.1 start
 
+echo "setting password ..."
+isql-vt exec='set password dba dba;'
+
 # start the php5-fpm service
 echo "starting php …"
 service php5-fpm start
